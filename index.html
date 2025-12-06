@@ -10,13 +10,10 @@
     <!-- NAVEGAÇÃO PRINCIPAL -->
     <nav class="main-nav">
         <div class="nav-container">
+            <img src="media/desenho.png" alt="Ícone" class="logo-icon">
             <h1>SÓ-LÁMENTO</h1>
             <div class="nav-buttons">
                 <button onclick="showPage('home')" class="nav-btn">Início</button>
-                <button onclick="showPage('fundamentos')" class="nav-btn">Fundamentos</button>
-                <button onclick="showPage('sintese')" class="nav-btn">Vídeo e Animação</button>
-                <button onclick="showPage('midi')" class="nav-btn">MIDI</button>
-                <button onclick="showPage('quiz')" class="nav-btn quiz-btn">QUIZ</button>
             </div>
         </div>
     </nav>
@@ -29,31 +26,28 @@
                 <p>Explore o mundo da música digital</p>
             </div>
             
-            <!--Banner principal -->
-            <div class="hero-image">
-                <img src="media/baner.png">
-
-            </div>
-
-            <!-- Desenho -->
-            <div class="svg-container">
-                <img width="900px" src="media/desenhoVetorial.png">
-
-            </div>
-
             <div class="intro-cards">
                 <div class="intro-card" onclick="showPage('fundamentos')">
-                    <h3>🎼 Fundamentos</h3>
+                    <h3>🎼</h3>
+                    <h3>Fundamentos</h3>
                     <p>Aprenda sobre notas, escalas e ritmo</p>
                 </div>
                 <div class="intro-card" onclick="showPage('sintese')">
-                    <h3>🎬 Vídeo e Animação</h3>
+                    <h3>🎬</h3>
+                    <h3>Vídeo e Animação</h3>
                     <p>Descubra os tipos de Video e Animação</p>
                 </div>
                 <div class="intro-card" onclick="showPage('midi')">
-                    <h3>🎹 MIDI</h3>
+                    <h3>🎶</h3>
+                    <h3>MIDI</h3>
                     <p>Explore a música digital</p>
                 </div>
+                <div class="intro-card" onclick="showPage('quiz')">
+                    <h3>🤔</h3>
+                    <h3>QUIZ</h3>
+                    <p>Agora teste seu conhecimento</p>
+                </div>
+                
             </div>
         </div>
     </div>
@@ -71,7 +65,6 @@
                     <button onclick="playMidiNote('G')" class="midi-key">Sol</button>
                 </div>
 
-            <!-- SUBSTITUIR: Imagem Vetorial SVG 2 - Escala Musical -->
             <div class="svg-container">
                 <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
                     <!-- Pentagrama -->
@@ -117,15 +110,13 @@
                 <video id="video1" controls width="100%">
                     <source src="media/videoEditado.mp4" type="video/mp4">
                 </video>
-                <p class="media-label">🎬 Vídeo (MP4/WebM)</p>
+                <p class="media-label">🎬Vídeo</p>
             </div>
 
             <!-- SUBSTITUIR: Animação-->
              <div class="video-section">
-                <video id="video1" controls width="100%">
-                    <source src="media/animacao.mp4" type="video/mp4">
-                </video>
-                <p class="media-label">🎬 Animação(MP4/WebM)</p>
+                <img src="media/animacao.gif" width="800">
+                <p class="media-label">🎬Animação</p>
             </div>
             <div class="info-box">
                 <h3>Tipos de Vídeo e Animação:</h3>
