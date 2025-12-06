@@ -48,7 +48,7 @@ body {
     align-items: center;
     gap: 1rem;
     flex-shrink: 0;
-    margin-right: auto; /* Empurra os botões para a direita */
+    margin-right: auto;
 }
 
 .logo-icon {
