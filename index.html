@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Educacional de Música</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVEGAÇÃO PRINCIPAL -->
+    <nav class="main-nav">
+        <div class="nav-container">
+            <h1>SÓ-LÁMENTO</h1>
+            <div class="nav-buttons">
+                <button onclick="showPage('home')" class="nav-btn">Início</button>
+                <button onclick="showPage('fundamentos')" class="nav-btn">Fundamentos</button>
+                <button onclick="showPage('sintese')" class="nav-btn">Vídeo e Animação</button>
+                <button onclick="showPage('midi')" class="nav-btn">MIDI</button>
+                <button onclick="showPage('quiz')" class="nav-btn quiz-btn">QUIZ</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PÁGINA INICIAL -->
+    <div id="home" class="page active">
+        <div class="hero">
+            <div class="animated-title">
+                <h2>Bem-vindo ao Sistema Educacional</h2>
+                <p>Explore o mundo da música digital</p>
+            </div>
+            
+            <!--Banner principal -->
+            <div class="hero-image">
+                <img src="media/baner.png">
+
+            </div>
+
+            <!-- Desenho -->
+            <div class="svg-container">
+                <img width="900px" src="media/desenhoVetorial.png">
+
+            </div>
+
+            <div class="intro-cards">
+                <div class="intro-card" onclick="showPage('fundamentos')">
+                    <h3>🎼 Fundamentos</h3>
+                    <p>Aprenda sobre notas, escalas e ritmo</p>
+                </div>
+                <div class="intro-card" onclick="showPage('sintese')">
+                    <h3>🎬 Vídeo e Animação</h3>
+                    <p>Descubra os tipos de Video e Animação</p>
+                </div>
+                <div class="intro-card" onclick="showPage('midi')">
+                    <h3>🎹 MIDI</h3>
+                    <p>Explore a música digital</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA FUNDAMENTOS -->
+    <div id="fundamentos" class="page">
+        <div class="content-container">
+            <h2>🎼 Fundamentos de Música</h2>
+            
+<div class="midi-controls">
+                    <button onclick="playMidiNote('C')" class="midi-key">Dó</button>
+                    <button onclick="playMidiNote('D')" class="midi-key">Ré</button>
+                    <button onclick="playMidiNote('E')" class="midi-key">Mi</button>
+                    <button onclick="playMidiNote('F')" class="midi-key">Fá</button>
+                    <button onclick="playMidiNote('G')" class="midi-key">Sol</button>
+                </div>
+
+            <!-- SUBSTITUIR: Imagem Vetorial SVG 2 - Escala Musical -->
+            <div class="svg-container">
+                <svg viewBox="0 0 400 150" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Pentagrama -->
+                    <line x1="20" y1="30" x2="380" y2="30" stroke="#333" stroke-width="2"/>
+                    <line x1="20" y1="50" x2="380" y2="50" stroke="#333" stroke-width="2"/>
+                    <line x1="20" y1="70" x2="380" y2="70" stroke="#333" stroke-width="2"/>
+                    <line x1="20" y1="90" x2="380" y2="90" stroke="#333" stroke-width="2"/>
+                    <line x1="20" y1="110" x2="380" y2="110" stroke="#333" stroke-width="2"/>
+                    <!-- Notas -->
+                    <circle cx="80" cy="90" r="12" fill="#FF6B6B"/>
+                    <circle cx="140" cy="70" r="12" fill="#4ECDC4"/>
+                    <circle cx="200" cy="50" r="12" fill="#FFE66D"/>
+                    <circle cx="260" cy="70" r="12" fill="#95E1D3"/>
+                    <circle cx="320" cy="90" r="12" fill="#A8E6CF"/>
+                    <text x="75" y="135" font-size="14" fill="#333">Dó</text>
+                    <text x="135" y="135" font-size="14" fill="#333">Ré</text>
+                    <text x="195" y="135" font-size="14" fill="#333">Mi</text>
+                    <text x="255" y="135" font-size="14" fill="#333">Fá</text>
+                    <text x="315" y="135" font-size="14" fill="#333">Sol</text>
+                </svg>
+                <p class="media-label">🎨Escala Musical</p>
+            </div>
+
+            <div class="info-box">
+                <h3>Conceitos Básicos:</h3>
+                <ul>
+                    <li><strong>Nota Musical:</strong> Som com altura definida</li>
+                    <li><strong>Escala:</strong> Sequência de notas em ordem ascendente ou descendente</li>
+                    <li><strong>Ritmo:</strong> Organização dos sons no tempo</li>
+                    <li><strong>Timbre:</strong> Qualidade que diferencia sons de mesma altura</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Vídeo e Animação -->
+    <div id="sintese" class="page">
+        <div class="content-container">
+            <h2>🎬 Vídeo e Animação</h2>
+            
+            <!-- SUBSTITUIR: Vídeo -->
+            <div class="video-section">
+                <video id="video1" controls width="100%">
+                    <source src="media/videoEditado.mp4" type="video/mp4">
+                </video>
+                <p class="media-label">🎬 Vídeo (MP4/WebM)</p>
+            </div>
+
+            <!-- SUBSTITUIR: Animação-->
+             <div class="video-section">
+                <video id="video1" controls width="100%">
+                    <source src="media/animacao.mp4" type="video/mp4">
+                </video>
+                <p class="media-label">🎬 Animação(MP4/WebM)</p>
+            </div>
+            <div class="info-box">
+                <h3>Tipos de Vídeo e Animação:</h3>
+                <ul>
+                    <li><strong>Animação 2D Tradicional:</strong> Desenhos feitos à mão, quadro a quadro.</li>
+                    <li><strong>Animação 3D:</strong> Modelos e cenários criados em espaço virtual tridimensional.</li>
+                    <li><strong>Vídeo Vlog:</strong> Conteúdo informal e pessoal, gravado como um diário em vídeo.</li>
+                    <li><strong>Vídeo Tutorial:</strong> Mostra o passo a passo de como fazer ou usar algo..</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA MIDI -->
+    <div id="midi" class="page">
+        <div class="content-container">
+            <h2>🎹 MIDI - Musical Instrument Digital Interface</h2>
+            <div class="midi-section">
+                <h3>🎵 Exemplo de Música MIDI</h3>
+                <audio id="midiAudio" controls>
+                    <source src="media/musica.mp3" type="audio/mpeg">
+                </audio>
+                <p class="media-label">🎼 Música</p>       
+            </div>
+            <div class="midi-section">
+                <h3>🎵 Exemplo de Voz sintetizada</h3>
+                <audio id="midiAudio" controls>
+                    <source src="media/vocal.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="midiAudio" controls>
+                    <source src="media/voz sintetizada.mp3" type="audio/mpeg">
+                </audio>
+                <p class="media-label">🎼 Voz Sintetizada</p>       
+            </div>
+            <div class="info-box">
+                <h3>O que é MIDI?</h3>
+                <ul>
+                    <li><strong>Protocolo:</strong> Padrão de comunicação entre instrumentos digitais</li>
+                    <li><strong>Mensagens:</strong> Transmite informações de nota, velocidade, duração</li>
+                    <li><strong>Vantagens:</strong> Arquivos pequenos, editáveis, versáteis</li>
+                    <li><strong>Aplicações:</strong> Produção musical, jogos, educação</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PÁGINA QUIZ -->
+    <div id="quiz" class="page">
+        <div class="quiz-container">
+            <div id="quizIntro" class="quiz-intro">
+                <h2>🏆 QUIZ - Teste seus Conhecimentos</h2>
+                <p>Responda 5 perguntas sorteadas sobre música e síntese de voz!</p>
+                <p class="quiz-info">Base de 19 perguntas • 5 questões por rodada</p>
+                <button onclick="startQuiz()" class="start-quiz-btn">Iniciar QUIZ</button>
+            </div>
+
+            <div id="quizQuestions" class="quiz-questions" style="display: none;">
+                <div class="quiz-header">
+                    <h3>Questão <span id="currentQuestionNum">1</span> de 5</h3>
+                    <div class="progress-bar">
+                        <div id="progressFill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <div id="questionContainer" class="question-container">
+                    <!-- Perguntas serão inseridas aqui via JavaScript -->
+                </div>
+
+                <button id="nextBtn" onclick="nextQuestion()" class="next-btn" style="display: none;">
+                    Próxima Questão
+                </button>
+            </div>
+
+            <div id="quizResults" class="quiz-results" style="display: none;">
+                <h2>🎉 Resultado do QUIZ</h2>
+                <div class="result-score">
+                    <div class="score-circle">
+                        <span id="scorePercentage">0%</span>
+                    </div>
+                    <p id="scoreText"></p>
+                </div>
+                <div id="answersReview" class="answers-review"></div>
+                <button onclick="restartQuiz()" class="restart-btn">Fazer Novamente</button>
+                <button onclick="showPage('home')" class="home-btn">Voltar ao Início</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
