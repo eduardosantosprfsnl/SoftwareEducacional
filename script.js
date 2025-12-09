@@ -1,4 +1,20 @@
 
+window.addEventListener('DOMContentLoaded', () => {
+    const navbar = document.querySelector('.main-nav');
+    let lastScroll = 0;
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+        
+        if (currentScroll > 0) {
+            navbar.classList.add('visible');
+        } else {
+            navbar.classList.remove('visible');
+        }
+        
+        lastScroll = currentScroll <= 0 ? 0 : currentScroll;
+    });
+});
 function showPage(pageName) {
     // Esconde todas as páginas
     const pages = document.querySelectorAll('.page');
@@ -13,7 +29,6 @@ function showPage(pageName) {
     // Scroll para o topo
     window.scrollTo(0, 0);
 }
-
 
 // BASE DE PERGUNTAS DO QUIZ
 
